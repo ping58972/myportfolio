@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "My Portfolio Website",
   "main": "index.js",
+  "homepage": "https://ping58972.github.io/myportfolio/",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive", "deploy": "gh-pages -d dist"
-
   },
   "keywords": [],
   "author": "ping58972",
