@@ -8,6 +8,7 @@ body{
     font-family: 'Segor UI', 'Segoe UI', 'Tahoma', Veneva, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
 }
+
 header{
     position:  fixed;
     z-index: 2;
@@ -33,24 +34,34 @@ header{
         @include trans; 
        
        // line-height: 2;
-        .symbol_btn{
-            position: absolute;
-            right: 0px;
-            
-            //margin: 0px;
-          //  margin-bottom: 20px;
-           // height: 40px;
-//width: 10px;
-         //   border: 1px solid #000;
-            .symbol_lines{
-                right: 35px;
-                width: 28px;
-                height: 3px;
-                margin: 0 0 5px 0;
-                background: text-color($bg_color);
-                @include trans;
-            } 
+       .symbol_btn{
+        position: absolute;
+        right: 0px;
+        .symbol_line{
+            right: 35px;
+            width: 28px;
+            height: 3px;
+            margin: 0 0 5px 0;
+            background: text-color($bg_white);
+            @include trans;
         } 
+        
+        &.close{
+            .symbol_line{
+                transform: rotate(180deg);
+                &:nth-child(2){
+                    transform: rotate(45deg) translate(5px, 5px);
+                }
+                &:nth-child(3){
+                    opacity: 0;
+                }
+                &:nth-child(4){
+                    transform: rotate(-45deg) translate(7px, -6px);
+                }
+    
+            }
+        }
+    } 
         .str_links{
           font-size: 0.5rem;
           padding-top: 30px;
@@ -68,9 +79,7 @@ header{
     min-height: 450px;
     max-height: 500px;
     border: 1px solid #000;
-    .left{
-        
-       
+    .left{  
         .display{  
             float: right;
             z-index: 3;
@@ -85,10 +94,8 @@ header{
                 overflow: hidden;
                 text-overflow: ellipsis;
                 max-height: 300px;
-                }
-               
-            }
-               
+                }              
+            }              
        }
     }
     .right{
@@ -96,15 +103,43 @@ header{
             padding-left: 30px;
         }
         .project_list {
-            padding-left: 0px;
-
+            
             .project_name{
-            padding: 10px;
-                border: 1px solid #000;
+            padding: 15px;
+            padding-left: 80px;
+              // border: 1px solid #000;
                 width: 200px;
             }
         }
     }
-
 }
 
+aside{
+    background-color: #000;
+    color: #fff;
+   // text-align: right;
+   float: cover;
+    z-index: 3;
+    width: 760px;
+    @include trans;
+    .close_btn{
+        position: absolute;
+        right: 0px;
+        .colse_line{
+            right: 35px;
+                width: 28px;
+                height: 3px;
+                margin: 0 0 5px 0;
+              //  background: text-color($bg_back);
+                @include trans;
+        }
+    }
+   
+}
+
+
+footer{
+    background-color: #000;
+    color: #fff;
+
+}

@@ -27,13 +27,21 @@ header {
     header .top_right .symbol_btn {
       position: absolute;
       right: 0px; }
-      header .top_right .symbol_btn .symbol_lines {
+      header .top_right .symbol_btn .symbol_line {
         right: 35px;
         width: 28px;
         height: 3px;
         margin: 0 0 5px 0;
         background: #000;
         transition: all 0.5s ease-out; }
+      header .top_right .symbol_btn.close .symbol_line {
+        transform: rotate(180deg); }
+        header .top_right .symbol_btn.close .symbol_line:nth-child(2) {
+          transform: rotate(45deg) translate(5px, 5px); }
+        header .top_right .symbol_btn.close .symbol_line:nth-child(3) {
+          opacity: 0; }
+        header .top_right .symbol_btn.close .symbol_line:nth-child(4) {
+          transform: rotate(-45deg) translate(7px, -6px); }
     header .top_right .str_links {
       font-size: 0.5rem;
       padding-top: 30px; }
@@ -59,9 +67,28 @@ header {
       max-height: 300px; }
   .main_projects .right .str_idea {
     padding-left: 30px; }
-  .main_projects .right .project_list {
-    padding-left: 0px; }
-    .main_projects .right .project_list .project_name {
-      padding: 10px;
-      border: 1px solid #000;
-      width: 200px; }
+  .main_projects .right .project_list .project_name {
+    padding: 15px;
+    padding-left: 80px;
+    width: 200px; }
+
+aside {
+  background-color: #000;
+  color: #fff;
+  float: cover;
+  z-index: 3;
+  width: 760px;
+  transition: all 0.5s ease-out; }
+  aside .close_btn {
+    position: absolute;
+    right: 0px; }
+    aside .close_btn .colse_line {
+      right: 35px;
+      width: 28px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      transition: all 0.5s ease-out; }
+
+footer {
+  background-color: #000;
+  color: #fff; }
