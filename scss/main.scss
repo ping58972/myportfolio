@@ -236,14 +236,46 @@ section{
 .hide {
     visibility: hidden;
 }
+
 aside{
-    background-color: #000;
-    color: #fff;
-   // text-align: right;
-   float: cover;
-    z-index: 3;
-    width: 760px;
-    @include trans;
+    position: fixed;
+        padding: 20px;
+        background-color: #000;
+        color: #fff;
+        top: 0;
+        right: 0;
+        //height: 1500px;
+         z-index: 3;
+         width: 760px;
+         //height: 1600px;
+         @include trans;
+    .bg-black{
+        
+      //  visibility: hidden;
+      
+      overflow: auto;
+      //height: 100%;
+      height: 1600px;
+        display: grid;
+        grid-auto-columns: 500px;
+        grid-template-columns: 1fr;
+        
+    
+    
+    &.show {
+        visibility: visible;
+    }
+    .pic {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background-image: $ping_img;
+        background-repeat: no-repeat;
+        z-index: 3;
+        top: 0;
+        left: 0;
+    }
     .close_btn{
         position: absolute;
         right: 0px;
@@ -256,6 +288,22 @@ aside{
                 @include trans;
         }
     }
+
+    .side-body {
+        height: 2000px;
+      //  position: relative;
+     //   overflow-y: scroll;
+       // background-color: red;
+        //height: 600px;
+       
+        .side-box {
+         //   position: relative;
+          //  overflow: auto;
+            //height: 1000px;
+        }
+      
+    }
+}
    
 }
 
@@ -265,3 +313,36 @@ footer{
     color: #fff;
 
 }
+
+/*
+html, body {
+    height: 100%;
+ 
+    margin: 0;
+}
+#content {
+    height: 100%;
+}
+#left {
+    float: left;
+    width: 100%;
+    background: red;
+    height: 80%;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 0.4em;
+}
+#right {
+   
+    position: fixed;
+    right: 0;
+    z-index: 3;
+    width: 70%;
+    background: blue;
+    height: 50%;
+    overflow: auto;
+    
+    box-sizing: border-box;
+    padding: 0.4em;
+}
+*/
