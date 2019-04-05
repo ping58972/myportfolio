@@ -1,5 +1,5 @@
 const symbol_btn = document.querySelector(".symbol_btn");
-const close_line = document.querySelector(".close_line");
+const close_line = document.querySelector(".close_btn");
 const aside = document.querySelector("aside");
 const bodyPage = document.querySelector(".main_projects");
 const bodyPage1 = document.querySelector(".top_left");

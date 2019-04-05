@@ -1,17 +1,17 @@
 @import 'collections';
 //handle top
 body{
- //  @include background;
-  // color: red;//$primary-color;
+ 
    height:100%;
    margin:0;
     font-family: 'Segor UI', 'Segoe UI', 'Tahoma', Veneva, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
+
 }
 
 header{
     
-    z-index: 2;
+    z-index: 4;
     width: 100%;
     .top_left{
         line-height: 1;
@@ -20,6 +20,7 @@ header{
         grid-template-columns: 1fr 4fr;
         .logo{
             position:  fixed;
+            z-index: 5;
             
             img {  
                 max-width: 100px;
@@ -38,7 +39,7 @@ header{
         position: fixed;
         text-align: right;
       //  position: absolute;
-        z-index: 3;
+        //z-index: 3;
         right: 35px;
         top: 35px;
         @include trans; 
@@ -56,27 +57,12 @@ header{
             background: text-color($bg_white);
             @include trans;
         } 
-        
-      /*  &.close{
-            .symbol_line{
-                transform: rotate(180deg);
-                &:nth-child(2){
-                    transform: rotate(45deg) translate(5px, 5px);
-                }
-                &:nth-child(3){
-                    opacity: 0;
-                }
-                &:nth-child(4){
-                    transform: rotate(-45deg) translate(7px, -6px);
-                }
-    
-            }
-        } */
+
     } 
         .str_links{
           font-size: 0.5rem;
           padding-top: 30px;
-          //border: 1px solid #000;
+  
         } 
         
     }
@@ -101,58 +87,172 @@ section{
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: 150px;
-    min-height: 450px;
-    max-height: 500px;
-   
-   // overflow: hidden;
+   // height: 450px;
+   // max-height: 500px;
+  
     .left{  
-        //-color: #444;
+       
      padding-left: 150px;
-//display: grid;
-     //  grid-template-columns: 1fr;
-     //  margin-right: 0;
-     //  margin-left: auto;
-       max-height: 450px;
-       // overflow: hidden;
+
+       //max-height: 200px;
+   
        position: relative;
 
         .display{  
-           // border: 1px solid #000;
-            //float: right;
-            //left: 10px;
-           
-           // left: 120px;
-           
-           // right: 35px;
-            //top: 35px;  
-            position: absolute;
+          //  visibility: hidden;
+           position: absolute;
             right: 0px;
-          //  max-width:600px;
-         //  width: 600px;
+     
             height: 450px;
             
-            background-image: $project_img;
-            background-color: #444;
+          //  background-image: $project_img;
+          //  background-color: #444;
             
            
-            .str_describe{
+            .str_describe_1{
                 position: absolute;
                 right: 0px;
                 top: 23px;
                 width:500px;
-                visibility: hidden;
+             //  visibility: hidden;
                 
                 p{
-                //white-space: nowrap;
+              
                 overflow: hidden;
-              //  text-overflow: ellipsis;
+             
                 max-height: 300px;
                 padding-left: 30px;
                 padding-right: 30px;
                 z-index: 3;
                 }   
-                &.show {
-                    visibility: visible;
+                &.current {
+                    z-index: 3;
+                    background-image: $project_img;
+                    background-color: #444;
+                   background-size: 300px;
+                   background-repeat: no-repeat;
+
+                }            
+            } 
+           
+            .str_describe_2{
+                position: absolute;
+                right: 0px;
+                top: 23px;
+                width:500px;
+             //   visibility: hidden;
+                
+                p{
+              
+                overflow: hidden;
+             
+                max-height: 300px;
+                padding-left: 30px;
+                padding-right: 30px;
+                z-index: 3;
+                }   
+                &.current {
+                   // visibility: visible;
+                    background-image: $project_img;
+                    background-color: #444;
+                   //background-size: 300px;
+                   background-repeat: no-repeat;
+
+                }            
+            } 
+            .str_describe_3{
+                position: absolute;
+                right: 0px;
+                top: 23px;
+                width:500px;
+ 
+                
+                p{
+              
+                overflow: hidden;
+             
+                max-height: 300px;
+                padding-left: 30px;
+                padding-right: 30px;
+                z-index: 3;
+                }   
+                &.current {
+                    z-index: 3;
+                    background-image: $project_img;
+                    background-color: #444;
+                   background-size: 300px;
+                   background-repeat: no-repeat;
+
+                }            
+            } 
+            .str_describe_4{
+                position: absolute;
+                right: 0px;
+                top: 23px;
+                width:500px;
+ 
+                
+                p{
+              
+                overflow: hidden;
+             
+                max-height: 300px;
+                padding-left: 30px;
+                padding-right: 30px;
+                z-index: 3;
+                }   
+                &.current {
+                    z-index: 3;
+                    background-image: $project_img;
+                    background-color: #444;
+                   background-size: 300px;
+                   background-repeat: no-repeat;
+
+                }            
+            } 
+            .str_describe_5{
+                position: absolute;
+                right: 0px;
+                top: 23px;
+                width:500px;
+    
+                
+                p{
+              
+                overflow: hidden;
+             
+                max-height: 300px;
+                padding-left: 30px;
+                padding-right: 30px;
+                z-index: 3;
+                }   
+                &.current {
+                    z-index: 3;
+                    background-image: $project_img;
+                    background-color: #444;
+                   background-size: 300px;
+                   background-repeat: no-repeat;
+
+                }            
+            } 
+            .str_describe_6{
+                position: absolute;
+                right: 0px;
+                top: 23px;
+                width:500px;
+   
+                
+                p{
+              
+                overflow: hidden;
+             
+                max-height: 300px;
+                padding-left: 30px;
+                padding-right: 30px;
+                z-index: 3;
+                }   
+                &.current {
+                    z-index: 3;
                     background-image: $project_img;
                     background-color: #444;
                    background-size: 300px;
@@ -165,17 +265,24 @@ section{
       
     }
     .right{
+        width: 100%;
         .str_idea {
             padding-left: 30px;
         }
         .project_list {
-            
+            padding-right: 120px;
+            .project_str {
+                visibility: hidden;
+                height: 0;
+            }
             .project_name{
                 padding: 15px;
                 padding-left: 80px;
-              // border: 1px solid #000;
-                width: 200px;
+              //  padding-right: 200px;
+                width: 400px;
+                //background-color: #444;
                 &.current {
+                    //visibility: visible;
                     background-color: #444;
                    color: white;
                    font-size: 120%;
@@ -186,7 +293,7 @@ section{
     }
 }
 .other_project {
-    // position: relative;
+   padding-top: 100px;
     .str_otherIdea {
         padding-left: 120px;
     }
@@ -202,17 +309,13 @@ section{
         }
 
     
-   // border: 1px solid rgb(214, 2, 2);
+   
     height: 250px;
     display: grid;
     grid-template-columns: 20% 80%;
-   // .haedBoxs{
-      //  
-     //   border: 1px solid #000;
-       
-  //  }
+ 
     .project_big_box {
-        //border: 1px solid rgb(76, 0, 255);
+      
         display: grid;
         grid-template-columns: repeat(20, 1fr);
         margin-right: 100px;
@@ -221,11 +324,11 @@ section{
         .projectBoxs {
            
             width: 300px;
-         //   border: 1px solid rgb(214, 2, 2);
+        
             
              height: 250px;
              overflow: hidden;
-    //text-overflow: ellipsis;
+  
             p{
                 padding-right: 30px;
             }
@@ -241,7 +344,7 @@ section{
 aside{
     visibility: hidden; 
     position: fixed;
-       // padding: 20px;
+      
        padding-top: 20px;
         padding-left: 25px;
         background-color: #000;
@@ -297,19 +400,25 @@ aside{
         z-index: 4;
        // border: 1px solid red;
         position: absolute;
-        top: 35px;
+        top: 15px;
         right: 35px;
         
         .close_btn{
-           // border: 1px solid red;
-
+            width: 30px;
+            height: 30px;
+           
+            position: absolute;
+                right: 0;
+               // top: 0px;;
+            cursor: pointer;
             .close_line{
-                cursor: pointer;
+                
                 position: absolute;
                 right: 0;
+                top: 11px;
                     width: 28px;
-                    height: 3px;
-                    margin: 0 5px 5px 0;
+                    height: 4px;
+                   // margin: 0 5px 5px 0;
                     background: white;
                     //transform: rotate(45deg) translate(5px, 5px);
                     &:nth-child(1) {
@@ -320,20 +429,16 @@ aside{
                     }
             }
         }
+        .str_links {
+            padding-top: 20px;
+        }
     }
     
 
     .side-body {
         height: 3000px;
-      //  position: relative;
-     //   overflow-y: scroll;
-       // background-color: red;
-        //height: 600px;
-       
-        .side-box {
-         //   position: relative;
-          //  overflow: auto;
-            //height: 1000px;
+      
+        .side-box { 
             p {
                 padding-right: 20px;
             }
@@ -346,8 +451,107 @@ aside{
 
 
 footer{
+    min-height: 500px;
     background-color: #000;
     color: #fff;
-
+    padding-bottom: 20px;
 }
 
+@media screen and (max-width: 768px){
+  
+    
+       
+        .top_left{
+          
+            line-height: 1;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        //right: 100px;
+            .name{
+            
+                text-align: center;
+                position: relative;
+                z-index: 3;
+                padding-right: 100px;
+            
+               
+               
+            }
+        }
+        .top_right{
+       
+            //position: absolute;
+           
+         //   @include trans; 
+           
+           // line-height: 2;
+           .symbol_btn{
+            cursor: pointer;
+            position: absolute;
+            right: 0px;
+            .symbol_line{
+                right: 35px;
+                width: 28px;
+                height: 3px;
+                margin: 0 0 5px 0;
+                background: black;
+                @include trans;
+            } 
+    
+        } 
+            .str_links{
+              font-size: 0.5rem;
+              padding-top: 30px;
+      
+            } 
+            
+        }
+    
+
+  .main_projects{
+   width: 100%;
+  
+      .left {
+        padding-right: -500px;
+        position: none;
+        visibility: hidden;
+       
+      }
+      .right {
+        //background-color: #444;
+        width: 100%;
+         // visibility: hidden;
+         position: absolute;
+         
+         //width: 100%;
+         .str_idea {
+            padding-left: 150px;
+         }
+       .project_list {
+        text-align: center;
+           width: 100%;
+          // padding-right: 100px;
+           .project_str {
+            visibility: visible;
+            height: 400px;
+          //  background-color: #444;
+            color: white;
+            background-color: #444;
+                   background-size: 768px;
+                   background-image: $project_img;
+                   background-repeat: no-repeat;
+                   z-index: 3;
+        }
+      
+       }
+        
+      }
+    
+  }
+  .other_project {
+      padding-top: 800px;
+  }
+
+   
+}
