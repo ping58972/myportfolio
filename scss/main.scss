@@ -1,7 +1,16 @@
 @import 'collections';
 //handle top
 body{
- 
+    h1{
+        font-size: 2.5rem;
+        color: #444;
+        span {
+            color: #000;
+        }
+    } 
+    p{
+        font-size: 1rem;
+    }
    height:100%;
    margin:0;
     font-family: 'Segor UI', 'Segoe UI', 'Tahoma', Veneva, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -9,8 +18,8 @@ body{
 }
 
 header{
-    
-    z-index: 4;
+    z-index: 5;
+   
     width: 100%;
     .top_left{
         line-height: 1;
@@ -42,6 +51,7 @@ header{
         cursor: pointer;
         position: absolute;
         right: 0px;
+        z-index: 5;
         .symbol_line{
             right: 35px;
             width: 28px;
@@ -49,6 +59,7 @@ header{
             margin: 0 0 5px 0;
             background: text-color($bg_white);
             @include trans;
+            z-index: 5;
         } 
 
     } 
@@ -63,10 +74,10 @@ header{
 }
 section{
     h2{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     h4{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     p{
         font-size: 1rem;
@@ -74,11 +85,12 @@ section{
 }
 
 .main_projects {
+   
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 150px;
+    padding-top: 200px;
     .left{  
-     padding-left: 150px;
+     padding-left: 200px;
        position: relative;
         .display{  
            position: absolute;
@@ -337,6 +349,14 @@ footer{
 }
 
 @media screen and (max-width: 768px){
+    body{
+        h1{
+            font-size: 1.5rem;
+        } 
+        p{
+            font-size: 1rem;
+        }
+    }
         .top_left{
             line-height: 1;
         width: 100%;
@@ -347,6 +367,9 @@ footer{
                 position: relative;
                 z-index: 3;
                 padding-right: 100px;
+                p{
+                    font-size: 0.7rem;
+                }
             }
         }
         .top_right{
@@ -382,7 +405,7 @@ footer{
       }
       .right {
         width: 100%;
-         position: absolute;
+        // position: absolute;
          
          .str_idea {
             padding-left: 150px;
