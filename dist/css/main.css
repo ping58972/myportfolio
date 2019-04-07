@@ -1,6 +1,7 @@
 body {
   height: 100%;
   margin: 0;
+  width: 100%;
   font-family: 'Segor UI', 'Segoe UI', 'Tahoma', Veneva, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body h1 {
@@ -152,6 +153,7 @@ body::-webkit-scrollbar-button {
   .other_project .project_col {
     overflow: hidden;
     padding-left: 150px;
+    padding-right: 100px;
     display: grid;
     grid-template-rows: 1fr 1fr;
     padding-bottom: 30px;
@@ -165,7 +167,6 @@ body::-webkit-scrollbar-button {
       padding-bottom: 30px;
       display: grid;
       grid-template-columns: repeat(20, 1fr);
-      margin-right: 100px;
       overflow: hidden;
       height: 250px;
       overflow-x: auto; }
@@ -248,19 +249,22 @@ aside {
         padding-right: 20px; }
 
 footer {
-  min-height: 500px;
+  min-height: 400px;
   background-color: #000;
   color: #fff;
   padding-bottom: 20px; }
 
-@media screen and (max-width: 768px) {
-  body h1 {
-    font-size: 1.5rem; }
-  body p {
-    font-size: 1rem; }
+@media screen and (max-width: 1042px) {
+  body {
+    height: 100%;
+    margin: 0;
+    max-width: 100%; }
+    body h1 {
+      font-size: 1.5rem; }
+    body p {
+      font-size: 1rem; }
   .top_left {
-    line-height: 1;
-    width: 100%;
+    max-width: 100%;
     display: grid;
     grid-template-columns: 1fr; }
     .top_left .name {
@@ -285,18 +289,20 @@ footer {
     font-size: 0.5rem;
     padding-top: 30px; }
   .main_projects {
-    width: 100%; }
+    max-width: 100%;
+    padding-top: 150px; }
     .main_projects .left {
-      padding-right: -500px;
-      position: none;
+      padding-left: 0px;
+      position: absolute;
+      height: 0px;
+      width: 0px;
+      overflow: hidden;
       visibility: hidden; }
     .main_projects .right {
-      width: 100%; }
-      .main_projects .right .str_idea {
-        padding-left: 150px; }
+      padding-left: 120px;
+      max-width: 100%; }
       .main_projects .right .project_list {
-        text-align: center;
-        width: 100%;
+        max-width: 100%;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr; }
@@ -307,10 +313,12 @@ footer {
           background-image: url(../img/project_ex.png);
           background-color: #444;
           background-size: 300px;
-          background-repeat: no-repeat; }
+          background-repeat: no-repeat;
+          overflow: hidden; }
   .other_project {
     padding-right: 0px;
-    padding-top: 800px; }
+    max-width: 100%;
+    padding-top: 50px; }
     .other_project .project_col {
       padding-left: 100px;
       text-align: center;
@@ -318,13 +326,28 @@ footer {
       display: grid;
       grid-template-rows: 1fr;
       grid-template-columns: 1fr;
-      padding-right: 0px; }
+      padding-top: 0px;
+      width: 100%; }
       .other_project .project_col .headBoxs {
-        text-align: center;
-        max-width: 300px; }
+        text-align: left;
+        max-width: 500px;
+        width: 100%;
+        padding: 0;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        max-height: 100px; }
         .other_project .project_col .headBoxs h2 {
           font-size: 1rem; }
         .other_project .project_col .headBoxs p {
           font-size: 0.8rem; }
       .other_project .project_col .project_big_box {
-        max-width: 100%; } }
+        width: 100%;
+        padding-top: 0px; }
+        .other_project .project_col .project_big_box .projectBoxs {
+          padding-top: 0px; }
+          .other_project .project_col .project_big_box .projectBoxs h4 p {
+            padding-top: 0px; }
+  footer {
+    padding-right: 0px;
+    width: 100%;
+    padding-bottom: 20px; } }
