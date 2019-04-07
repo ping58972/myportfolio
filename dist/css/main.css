@@ -182,14 +182,15 @@ body::-webkit-scrollbar-button {
 aside {
   visibility: hidden;
   position: fixed;
+  height: 100%;
   padding-top: 20px;
   padding-left: 25px;
-  background-color: #000;
+  background-color: black;
   color: #fff;
   top: 0;
   right: 0;
   z-index: 3;
-  width: 760px;
+  width: 640px;
   list-style: none;
   transform: translate3d(100%, 0, 0);
   transition: all 0.5s ease-out; }
@@ -201,13 +202,15 @@ aside {
   aside .bg-black {
     width: 100%;
     height: 100%;
-    padding-right: 25px;
     overflow-y: scroll;
     max-height: 1600px;
     display: grid;
     grid-auto-columns: 500px;
-    grid-template-columns: 1fr;
-    box-sizing: content-box; }
+    grid-template-columns: 1fr; }
+    aside .bg-black .side_name span {
+      color: white; }
+    aside .bg-black .side_name h1 {
+      color: #9c9c9c; }
     aside .bg-black .pic {
       position: relative;
       width: 250px;
@@ -244,6 +247,8 @@ aside {
         padding-top: 20px; }
     aside .bg-black .side-body {
       height: 3000px; }
+      aside .bg-black .side-body h2 {
+        color: #9c9c9c; }
       aside .bg-black .side-body .side-box p {
         padding-right: 20px; }
 
@@ -346,3 +351,11 @@ footer {
     padding-right: 0px;
     max-width: 100%;
     padding-bottom: 20px; } }
+
+@media screen and (max-width: 411px) {
+  aside {
+    width: 400px; }
+    aside .bg-black {
+      height: 2000px; }
+      aside .bg-black .side-body {
+        height: 4000px; } }

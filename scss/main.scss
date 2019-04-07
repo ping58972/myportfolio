@@ -258,15 +258,15 @@ body::-webkit-scrollbar {
 aside{
     visibility: hidden; 
     position: fixed;
-      
+      height: 100%;
        padding-top: 20px;
         padding-left: 25px;
-        background-color: #000;
+        background-color: black;
         color: #fff;
         top: 0;
         right: 0;
          z-index: 3;
-         width: 760px;
+         width: 640px;
          list-style: none;
         transform: translate3d(100%, 0, 0);
         //@include easeOut;
@@ -282,13 +282,21 @@ aside{
     .bg-black{
         width: 100%;
         height: 100%;
-        padding-right: 25px;
+      //  padding-right: 25px;
       overflow-y: scroll;
      max-height: 1600px;
         display: grid;
         grid-auto-columns: 500px;
         grid-template-columns: 1fr;
-        box-sizing: content-box; 
+       // box-sizing: content-box; 
+       .side_name {
+           span {
+               color: white;
+           }
+           h1 {
+               color: rgb(156, 156, 156);
+           }
+       }
     .pic {
         position: relative;
         width: 250px;
@@ -335,6 +343,9 @@ aside{
     }
     .side-body {
         height: 3000px;
+        h2 {
+            color : rgb(156, 156, 156);
+        }
         .side-box { 
             p {
                 padding-right: 20px;
@@ -504,4 +515,17 @@ footer{
     max-width: 100%;
     padding-bottom: 20px;
 }
+}
+
+
+@media screen and (max-width: 411px){
+ aside {
+     width: 400px;
+     .bg-black{
+         height: 2000px;
+     .side-body {
+        height: 4000px;
+     }
+    }
+ }
 }
