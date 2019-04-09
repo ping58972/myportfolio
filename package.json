@@ -5,13 +5,15 @@
   "main": "index.js",
   "homepage": "https://ping58972.github.io/myportfolio/",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive", "deploy": "gh-pages -d dist"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "ping58972",
   "license": "MIT",
   "dependencies": {
     "gh-pages": "^2.0.1",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "swiper": "^4.5.0"
   }
 }

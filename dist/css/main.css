@@ -118,30 +118,15 @@ section p {
           background-size: 500px;
           background-repeat: no-repeat; }
 
-/* Customize website's scrollbar like Mac OS
-Not supports in Firefox and IE */
-/* total width */
-.project_big_box::-webkit-scrollbar {
-  width: 5px; }
-
-/* background of the scrollbar except button or resizer */
-/* scrollbar itself */
-.project_big_box::-webkit-scrollbar-thumb {
-  background-color: #000;
-  border-radius: 6px; }
-
-/* set button(top and bottom of the scrollbar) */
 /* total width */
 body::-webkit-scrollbar {
   width: 6px; }
 
-/* background of the scrollbar except button or resizer */
 /* scrollbar itself */
 body::-webkit-scrollbar-thumb {
   background-color: #000;
   border-radius: 0px; }
 
-/* set button(top and bottom of the scrollbar) */
 body::-webkit-scrollbar-button {
   display: none; }
 
@@ -150,31 +135,30 @@ body::-webkit-scrollbar-button {
   .other_project .str_otherIdea {
     padding-left: 120px; }
   .other_project .project_col {
-    overflow: hidden;
     padding-left: 150px;
     padding-right: 100px;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    padding-bottom: 30px;
-    height: 250px;
-    display: grid;
-    grid-template-columns: 20% 80%; }
-    .other_project .project_col:nth-child(2n) {
-      background-color: #444;
-      color: white; }
-    .other_project .project_col .project_big_box {
-      padding-bottom: 30px;
-      display: grid;
-      grid-template-columns: repeat(20, 1fr);
-      overflow: hidden;
-      height: 250px;
-      overflow-x: auto; }
-      .other_project .project_col .project_big_box .projectBoxs {
-        width: 300px;
-        height: 250px;
-        overflow: hidden; }
-        .other_project .project_col .project_big_box .projectBoxs p {
-          padding-right: 30px; }
+    padding-bottom: 30px; }
+    .other_project .project_col .swiper-container {
+      border: 1px solid #ddd;
+      width: 100%;
+      height: 100%;
+      background-color: #eee; }
+    .other_project .project_col .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      height: 250px; }
+      .other_project .project_col .swiper-slide p {
+        padding-right: 30px; }
 
 .hide {
   visibility: hidden; }
@@ -324,29 +308,6 @@ footer {
             background-size: 500px;
             background-repeat: no-repeat;
             overflow: hidden; }
-  .other_project {
-    max-width: 100%; }
-    .other_project .project_col {
-      padding-left: 100px;
-      text-align: center;
-      height: 400px;
-      display: grid;
-      grid-template-rows: 1fr;
-      grid-template-columns: 1fr;
-      padding-top: 0px;
-      width: 100%; }
-      .other_project .project_col .headBoxs {
-        text-align: left;
-        max-width: 500px;
-        width: 100%; }
-        .other_project .project_col .headBoxs h2 {
-          font-size: 1rem; }
-        .other_project .project_col .headBoxs p {
-          font-size: 0.8rem; }
-      .other_project .project_col .project_big_box .projectBoxs {
-        padding-top: 0px; }
-        .other_project .project_col .project_big_box .projectBoxs h4 p {
-          padding-top: 0px; }
   footer {
     padding-right: 0px;
     max-width: 100%;
