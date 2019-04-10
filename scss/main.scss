@@ -1,12 +1,7 @@
 @import 'collections';
 //handle top
-html, body{
-    //z-index: -5;
-    //position: absolute;
-   // top:0;
-   // opacity: 0;
+html, body{   
     margin: 0;
-    
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
    height:100%;
@@ -41,26 +36,19 @@ html, body{
 
 header{
     z-index: 15;
-   
-    width: 100%;
     .top_left{
         line-height: 1;
-        width: 40%;
-        display: grid;
-        grid-template-columns: 1fr 4fr;
         .logo{
             position:  fixed;
-            z-index: 15;
+           
             img {  
                 max-width: 100px;
             }
             padding: 10px;
+            padding-top: 0px;
         } 
         .name{
-            text-align: left;
-            position: absolute;
-            z-index: 13;
-            left: 120px;
+            padding-left: 120px;
         }
     }
     .top_right{

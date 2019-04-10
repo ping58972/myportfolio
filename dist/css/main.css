@@ -28,24 +28,17 @@ html, body {
   position: fixed; }
 
 header {
-  z-index: 15;
-  width: 100%; }
+  z-index: 15; }
   header .top_left {
-    line-height: 1;
-    width: 40%;
-    display: grid;
-    grid-template-columns: 1fr 4fr; }
+    line-height: 1; }
     header .top_left .logo {
       position: fixed;
-      z-index: 15;
-      padding: 10px; }
+      padding: 10px;
+      padding-top: 0px; }
       header .top_left .logo img {
         max-width: 100px; }
     header .top_left .name {
-      text-align: left;
-      position: absolute;
-      z-index: 13;
-      left: 120px; }
+      padding-left: 120px; }
   header .top_right {
     z-index: 15;
     position: fixed;
