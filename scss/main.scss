@@ -1,10 +1,20 @@
 @import 'collections';
 //handle top
-body{
+html, body{
+    //z-index: -5;
+    //position: absolute;
+   // top:0;
+   // opacity: 0;
     margin: 0;
-    padding: 0;
+    
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
+   height:100%;
+   margin:0;
+   width: 100%;
+    font-family: 'Segor UI', 'Segoe UI', 'Tahoma', Veneva, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
     h1{
         font-size: 2.5rem;
         color: #444;
@@ -15,13 +25,19 @@ body{
     p{
         font-size: 1rem;
     }
-   height:100%;
-   margin:0;
-   width: 100%;
-    font-family: 'Segor UI', 'Segoe UI', 'Tahoma', Veneva, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5;
-    overflow-x: hidden;
+    
 }
+#particles-js{
+    width: 100%;
+    height: 100%;
+    background-color: #dddddd;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    z-index: -5;
+    position: fixed;
+  }
 
 header{
     z-index: 15;
@@ -70,7 +86,8 @@ header{
         } 
     } 
         .str_links{
-          font-size: 0.5rem;
+            cursor: pointer;
+          font-size: 0.8rem;
           padding-top: 30px;
         } 
     }
@@ -121,26 +138,17 @@ section{
             background: #007aff;
           }
       }
-      
-  
 }
-
-
-
-
-
 /* total width */
 body::-webkit-scrollbar {
      width:6px;
  }
- 
  /* scrollbar itself */
  body::-webkit-scrollbar-thumb {
      background-color: #000;//#babac0;
      border-radius:0px;
  }
  body::-webkit-scrollbar-button {display:none}
-
 .other_project {
    padding-top: 100px;
     .str_otherIdea {
@@ -279,10 +287,8 @@ aside{
                 padding-right: 20px;
             }
         }
-      
     }
-}
-   
+    }
 }
 footer{
     min-height: 400px;
@@ -303,9 +309,7 @@ footer{
    margin:0;
    max-width: 100%;
     }
-    
         .top_left{
-           // line-height: 1;
             max-width: 100%;
         display: grid;
         grid-template-columns: 1fr;
@@ -338,15 +342,12 @@ footer{
             .str_links{
               font-size: 0.5rem;
               padding-top: 30px;
-      
             } 
-            
         }
     
   .main_projects{
     max-width: 100%;
     padding-top: 150px;
-    //   
   }
 
   footer{
@@ -355,7 +356,6 @@ footer{
     padding-bottom: 20px;
 }
 }
-
 
 @media screen and (max-width: 411px){
  aside {
