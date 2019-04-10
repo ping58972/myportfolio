@@ -5,10 +5,6 @@ const bodyPage = document.querySelector(".main_projects");
 const bodyPage1 = document.querySelector(".top_left");
 const bodyPage2 = document.querySelector(".other_project");
 const bodyPage3 = document.querySelector("footer");
-const strDescribe = document.getElementsByClassName("str_describe");
-const mainProject = document.getElementsByClassName("project_name");
-const mainProject_sub = document.querySelector(".project_name.current");
-const strDescribe_sm = document.getElementsByClassName("str_describe_sm");
 
 
 symbol_btn.addEventListener('click', openSide);
@@ -17,25 +13,6 @@ bodyPage.addEventListener('click', bodyCloseSide);
 bodyPage1.addEventListener('click', bodyCloseSide);
 bodyPage2.addEventListener('click', bodyCloseSide);
 bodyPage3.addEventListener('click', bodyCloseSide);
- mainProject_sub.addEventListener('click', displayProject_stop);
-
-
-let x=0;
-
-for(let i=0; i<mainProject.length; i++){
- 
-  mainProject[i].addEventListener('click', () => {
-    strDescribe[i].classList.add('current');
-    mainProject[i].classList.add('current');
-   strDescribe_sm[i].classList.add('current');   
-    if(i!==x){
-      strDescribe[x].classList.remove('current');
-    mainProject[x].classList.remove('current');
-    strDescribe_sm[x].classList.remove('current');
-    }  
-    x=i;
-  });
-}
 
 let showSide = true;
 function openSide(){
@@ -55,76 +32,43 @@ function bodyCloseSide(){
      }
 }
 
-
-function displayProject_stop(){
-  mainProject_sub.removeEventListener('click', displayProject_stop); 
-  event.stopPropagation();
-}
-
-// var swiper = new Swiper('.swiper-container_main', {
-//   effect: 'coverflow',
-//   grabCursor: true,
-//   centeredSlides: true,
-//   slidesPerView: 'auto',
-//   coverflowEffect: {
-//     rotate: 50,
-//     stretch: 0,
-//     depth: 100,
-//     modifier: 1,
-//     slideShadows : true,
-//   },
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-// });
-
-//import Swiper from 'swiper';
-//var Swiper = require('swiper');
-//window.onload = function () {
-// const swiper = new Swiper('.swiper-container', {
-//   slidesPerView: 4,
-//   spaceBetween: 30,
-//  // slidesPerGroup: 4,
-//   //loop: true,
-//   loopFillGroupWithBlank: true,
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-// });
-//}
-
-// var swiper = new Swiper('.swiper-container', {
-//   slidesPerView: 4,
-//   spaceBetween: 30,
-//  // slidesPerGroup: 4,
-//   //loop: true,
-//   loopFillGroupWithBlank: true,
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-// });
-// const swiper = new Swiper('.swiper-containerss', {
-//   slidesPerView: 4,
-//   spaceBetween: 30,
-//  // slidesPerGroup: 4,
-//   //loop: true,
-//   loopFillGroupWithBlank: true,
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-// });
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+  // slidesPerGroup: 4,
+    //loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+});
+var swiper = new Swiper('.swiper-container-main', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+      // loop: true,
+        autoplay: {
+          delay: 1500,
+        // disableOnInteraction: false,
+        },
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows : true,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          },
+        },
+    });
