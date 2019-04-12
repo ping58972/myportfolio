@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Montserrat');
 $bg_white: #fff;
 $bg_back: #000;
 $show_bg_img: true;
-$bg_img: url(../img/background.jpg);
-$project_img: url(../img/project_ex.png);
+$bg_img: url(../img/bg_p.jpg);
+
 $ping_img: url(../img/Ping.png);
 $bg_opacity: 0.9;
-
+$primary-color: #444;
+$secondary-color: #eece1a;
+$background-opacity: 0.9;
 @mixin trans {
     transition: all 0.5s ease-out;
 }
@@ -13,6 +16,9 @@ $bg_opacity: 0.9;
   // background: $bg_img;
     background-attachment: fixed;
     background-size: cover;
+    &:after {
+    background: rgba($primary-color, $background-opacity);
+    }
 }
 
 @function text_color($color){
