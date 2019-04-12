@@ -1,26 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville|Montserrat");
 html, body {
   margin: 0;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  padding: 0;
+  padding-right: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  font-size: 16px;
   height: 100%;
   margin: 0;
   width: 100%;
-  font-family: 'Segor UI', 'Segoe UI', 'Tahoma', Veneva, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  color: white; }
   html h1, body h1 {
-    font-size: 2.5rem;
-    color: #444; }
+    font-weight: 100;
+    font-size: 2.5rem; }
     html h1 span, body h1 span {
-      color: #000; }
+      font-weight: bold; }
+  html h1, html h2, html h3, html h4, html h5, html h6, body h1, body h2, body h3, body h4, body h5, body h6 {
+    font-family: 'Montserrat', sans-serif; }
   html p, body p {
-    font-size: 1rem; }
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    font-weight: 100; }
 
 #particles-js {
   width: 100%;
   height: 100%;
-  background-color: #dddddd;
-  background-image: url("");
+  background-color: #444;
+  background-image: url(../img/bg_p.jpg);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -56,7 +64,7 @@ header {
         width: 28px;
         height: 3px;
         margin: 0 0 5px 0;
-        background: #000;
+        background: white;
         transition: all 0.5s ease-out;
         z-index: 15; }
     header .top_right .str_links {
@@ -70,8 +78,6 @@ section {
     font-size: 1.5rem; }
   section h4 {
     font-size: 1.2rem; }
-  section p {
-    font-size: 1rem; }
 
 .main_projects {
   position: relative;
@@ -80,13 +86,15 @@ section {
   .main_projects .swiper-container-main {
     width: 100%;
     padding-top: 50px;
-    padding-bottom: 50px; }
+    padding-bottom: 50px;
+    z-index: -5; }
     .main_projects .swiper-container-main .swiper-slide {
       background-position: center;
       background-size: cover;
       width: 400px;
       height: 400px;
-      overflow: hidden; }
+      overflow: hidden;
+      background-color: #bbb; }
     .main_projects .swiper-container-main .swiper-pagination-bullet {
       width: 20px;
       height: 20px;
@@ -129,7 +137,6 @@ body::-webkit-scrollbar-button {
     .other_project .project_col .swiper-slide {
       text-align: center;
       font-size: 18px;
-      background: #fff;
       /* Center slide text vertically */
       -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -148,19 +155,20 @@ aside {
   visibility: hidden;
   position: fixed;
   height: 100%;
-  padding-top: 20px;
+  padding-top: 25px;
   padding-left: 25px;
-  background-color: black;
+  background-color: #222;
+  opacity: 100%;
   color: #fff;
   top: 0;
   right: 0;
-  z-index: 3;
+  z-index: 0;
   width: 640px;
   list-style: none;
   transform: translate3d(100%, 0, 0);
   transition: all 0.5s ease-out; }
   aside.show {
-    z-index: 3;
+    z-index: 17;
     visibility: visible;
     transform: translate3d(0, 0, 0);
     transition: all 0.5s ease-out; }
@@ -169,10 +177,11 @@ aside {
     width: 100%;
     height: 100%;
     overflow-y: scroll;
-    max-height: 1600px;
+    max-height: 100%;
     display: grid;
     grid-auto-columns: 500px;
-    grid-template-columns: 1fr; }
+    grid-template-columns: 1fr;
+    padding-right: 25px; }
     aside .bg-black .side_name span {
       color: white; }
     aside .bg-black .side_name h1 {
@@ -214,11 +223,17 @@ aside {
       aside .bg-black .side_top_right .str_links {
         padding-top: 20px; }
     aside .bg-black .side-body {
-      height: 3000px; }
+      max-height: 3000px; }
       aside .bg-black .side-body h2 {
         color: #9c9c9c; }
       aside .bg-black .side-body .side-box p {
-        padding-right: 20px; }
+        font-weight: 100;
+        padding: 20px;
+        text-align: justify;
+        font-weight: 100;
+        color: #bbb; }
+        aside .bg-black .side-body .side-box p span {
+          color: white; }
 
 footer {
   min-height: 400px;
@@ -272,6 +287,6 @@ footer {
   aside {
     width: 400px; }
     aside .bg-black {
-      height: 2000px; }
+      max-height: 100%; }
       aside .bg-black .side-body {
         height: 4000px; } }
