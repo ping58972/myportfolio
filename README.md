@@ -13,6 +13,9 @@ The purpose of website is for practice front-end skill with vary technology. And
 - [SASS](#) - The web framework used.
 - [Javascript](#) - Used to implement MongoDB.
 - [Swiper](http://idangero.us/swiper/get-started) Used for displaying the project's carts.
+- [Adobe Xd](#) Used for design the website pages.
+- [Adobe Photoshop](#) Used for design the website pages.
+- [Adobe Illustrator](#) Used for design my logo brand the website pages.
 - More detail... see package.json
 
 ## Getting Started
