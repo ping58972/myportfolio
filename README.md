@@ -5,7 +5,7 @@
 <a href="https://ping58972.github.io/myportfolio/"><img src="https://a.imge.to/2019/07/12/qv2Hq.png" target="_blank" alt="Reaponse Website"></a>
 <a href="https://ping58972.github.io/myportfolio/"><img src="https://a.imge.to/2019/07/12/qvhSO.png" target="_blank" alt="Reaponse Website"></a>
 
-The purpose of website is for looking jobs about software engineering, web developer, and programmer. The website features include: showing my resume, side projects and my skill, etc.
+The purpose of website is for practice front-end skill with vary technology. And practice how to design a website page, etc.
 
 ## Built with
 
